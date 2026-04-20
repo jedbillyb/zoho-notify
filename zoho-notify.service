@@ -1,0 +1,12 @@
+[Unit]
+Description=Zoho Mail notifier
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/jed/projects/zoho-notify/zoho-notify.py
+WorkingDirectory=/home/jed/projects/zoho-notify
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target
